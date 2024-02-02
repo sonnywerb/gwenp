@@ -1,9 +1,16 @@
+@font-face {
+    font-family: custom;
+    src: url(../font/balonku.otf);
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #F8C8DC;
+    font-family: custom;
+    overflow: hidden;
 }
 
 /* Position the "No" button absolutely within body */
@@ -21,7 +28,6 @@ body {
 }
 
 .header_text {
-    font-family: 'Nunito';
     font-size: 50px;
     font-weight: bold;
     color: white;
@@ -31,7 +37,6 @@ body {
 }
 
 .text {
-    font-family: 'Nunito';
     font-size: 25px;
     font-weight: bold;
     color: white;

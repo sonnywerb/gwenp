@@ -1,9 +1,24 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Pacifico:wght@200;400;600&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+@font-face {
+    font-family: custom;
+    src: url(../font/balonku.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: custom;
+    background-color: pink;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #F8C8DC;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* Position the "No" button absolutely within body */
@@ -21,8 +36,7 @@ body {
 }
 
 .header_text {
-    font-family: 'Nunito';
-    font-size: 50px;
+    font-size: 3em;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -35,18 +49,19 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
     /* optional: adds some space between the buttons */
 }
 
 .btn {
-    background-color: #FFB6C1;
+    font-family: custom;
+    background-color: #fc8c9d;
     color: white;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.25em;
     margin: 4px 2px;
     cursor: pointer;
     border: none;
@@ -63,4 +78,27 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 90px;
+}
+
+/*===================================================================================================*/
+.cd__main{
+   background: pink !important;
+   min-height: 450px;
+}
+
+.heart {
+  position: fixed;
+  font-size: 1.5rem;
+  top: -1vh;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  from {
+     transform: translateY(0vh) translateX(-10vw); 
+  }
+  to {
+     transform: translateY(105vh) translateX(10vw); 
+  }
 }
