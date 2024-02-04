@@ -3,10 +3,18 @@ function nextPage() {
 }
 
 function moveButton() {
-    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-    document.getElementById('noButton').style.left = `${x}px`;
-    document.getElementById('noButton').style.top = `${y}px`;
+    var button = document.getElementById('noButton');
+    var style = window.getComputedStyle(button);
+    var marginLeft = parseFloat(style.marginLeft);
+    var marginRight = parseFloat(style.marginRight);
+    var marginTop = parseFloat(style.marginTop);
+    var marginBottom = parseFloat(style.marginBottom);
+
+    var x = Math.random() * (window.innerWidth - button.offsetWidth - marginLeft - marginRight);
+    var y = Math.random() * (window.innerHeight - button.offsetHeight - marginTop - marginBottom);
+
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
 }
 
 function createHeart() {
