@@ -43,6 +43,15 @@ body {
     margin-bottom: 0px;
 }
 
+.text {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
 .buttons {
     display: flex;
     flex-direction: row;
@@ -77,6 +86,12 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 90px;
+}
+
+.gif_container_yes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*===================================================================================================*/
